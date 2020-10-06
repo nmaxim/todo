@@ -1,0 +1,4 @@
+export const CALL_GET_TODOS = 'CALL_GET_TODOS';
+export const CALL_ADD_TODO = 'CALL_ADD_TODO';
+export const CALL_DONE_TODO = 'CALL_DONE_TODO';
+export const CALL_DELETE_TODO = 'CALL_DELETE_TODO';
