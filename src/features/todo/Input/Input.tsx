@@ -7,7 +7,7 @@ const Input: React.FC = () => {
     const dispatch = useDispatch();
     const [message, setMessage] = useState<string>('');
 
-   const addNewTodo = (message: string) => {
+    const addNewTodo = (message: string) => {
         dispatch(addTodoCall({
             message: message,
             done: false,
@@ -20,6 +20,9 @@ const Input: React.FC = () => {
 
     const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        if (!message.trim()) {
+            return;
+        }
         addNewTodo(message);
         setMessage('');
     };
